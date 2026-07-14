@@ -1,0 +1,139 @@
+{
+    "utilisateurs":[
+        {
+            "id":1,
+            "nom":"Admin",
+            "prenom":"System",
+            "adresse":"Dakar",
+            "ville":"Medina",
+            "email":"admin@kermobilier.sn",
+            "telephone":"770000000",
+            "motDePasse":"admin123",
+            "role":"ADMIN",
+            "photo":"",
+            "statut":"ACTIF"
+        }
+    ],
+    "categories":[
+        {
+            "id":1,
+            "nom":"Salon",
+            "image":""
+        },
+        {
+            "id":2,
+            "nom":"Chambre",
+            "image":""
+        },
+        {
+            "id":3,
+            "nom":"Salle à manger",
+            "image":""
+        },
+        {
+            "id":4,
+            "nom":"Bureau",
+            "image":""
+        }
+    ],
+    "produits":[
+        {
+            "id":1,
+            "nom":"Canapé moderne",
+            "description":"...",
+            "prix":350000,
+            "stock":5,
+            "dateCreation":"2026-07-13",
+            "dateModification":"2026-07-15",
+            "images":[
+            "img1.jpg",
+            "img2.jpg"
+            ],
+            "categorieId":1,
+            "artisanId":2,
+            "statut":"VALIDE",
+            "datePublication":"2026-07-14",
+            "noteMoyenne":0,
+            "nombreAvis":0,
+            "estVisible": true
+        }
+    ],
+    "commandes":[
+        {
+            "id":1,
+            "clientId":3,
+            "dateCommande":"2026-07-14",
+            "montant":350000,
+            "adresseLivraison":"Dakar",
+            "modePaiement":"",
+            "referencePaiement":"",
+            "statut":"EN_COURS"
+        }
+    ],
+    "lignesCommande":[
+        {
+            "id":1,
+            "commandeId":1,
+            "produitId":1,
+            "quantite":2,
+            "prix":350000
+        }
+    ],
+    "livraisons":[
+        {
+            "id":1,
+            "commandeId":1,
+            "livreurId":4,
+            "dateLivraison":"2026-07-16",
+            "dateRecuperation":"2026-07-16",
+            "dateLivree":"2026-07-16",
+            "statut":"EN_COURS"
+        }
+    ],
+    "demandesSurMesure":[
+        {
+            "id":1,
+            "clientId":3,
+            "description":"Je veux une armoire 4 portes",
+            "dimensions":"3m x 2m",
+            "materiau":"Bois rouge",
+            "budget":600000,
+            "image":"armoire.jpg",
+            "dateCreation":"2026-07-16",
+            "dateCloture":"2026-07-19",
+            "statut":"EN_ATTENTE"
+        }
+    ],
+    "propositions":[
+        {
+            "id":1,
+            "demandeSurMesureId":1,
+            "artisanId":2,
+            "prix":580000,
+            "delai":"15 jours",
+            "message":"Nous pouvons réaliser ce meuble.",
+            "statut":"EN_ATTENTE"
+        }
+    ],
+    "avis":[
+        {
+            "id":1,
+            "clientId":3,
+            "ligneCommandeId":1,
+            "note":5,
+            "commentaire":"Très beau canapé.",
+            "date":"2026-07-20"
+        }
+    ],
+    "notifications":[
+        {
+            "id":1,
+            "utilisateurId":2,
+            "titre":"Nouvelle commande",
+            "message":"Vous avez reçu une nouvelle commande.",
+            "lu":false,
+            "date":"2026-07-14",
+            "type":"COMMANDE"
+        }
+    ]
+}

@@ -1,9 +1,9 @@
 {
   "roles": [
-    { "id": "role-admin", "libelle": "Administrateur" },
-    { "id": "role-artisan", "libelle": "Artisan Fabricant" },
-    { "id": "role-client", "libelle": "Client Acheteur" },
-    { "id": "role-livreur", "libelle": "Livreur Logistique" }
+    { "id": "admin", "libelle": "Administrateur" },
+    { "id": "artisan", "libelle": "Artisan Fabricant" },
+    { "id": "client", "libelle": "Client Acheteur" },
+    { "id": "livreur", "libelle": "Livreur Logistique" }
   ],
   "utilisateurs": [
     {
@@ -12,7 +12,7 @@
       "prenom": "Moustapha",
       "email": "admin@kermobilier.sn",
       "password": "admin",
-      "roleId": "role-admin"
+      "roleId": "admin"
     },
     {
       "id": "user-artisan-1",
@@ -23,7 +23,7 @@
       "telephone": "771234567",
       "email": "abdou@gmail.com",
       "password": "password",
-      "roleId": "role-artisan",
+      "roleId": "artisan",
       "isPremium": true
     },
     {
@@ -35,7 +35,7 @@
       "telephone": "761112233",
       "email": "ibra@gmail.com",
       "password": "password",
-      "roleId": "role-artisan",
+      "roleId": "artisan",
       "isPremium": false
     },
     {
@@ -46,7 +46,7 @@
       "telephone": "789998877",
       "email": "awa@gmail.com",
       "password": "password",
-      "roleId": "role-client"
+      "roleId": "client"
     },
     {
       "id": "user-livreur-1",
@@ -56,7 +56,7 @@
       "telephone": "705554433",
       "email": "ousmane@kermobilier.sn",
       "password": "password",
-      "roleId": "role-livreur"
+      "roleId": "livreur"
     }
   ],
   "categories": [

@@ -1,139 +1,181 @@
 {
-    "utilisateurs":[
-        {
-            "id":1,
-            "nom":"Admin",
-            "prenom":"System",
-            "adresse":"Dakar",
-            "ville":"Medina",
-            "email":"admin@kermobilier.sn",
-            "telephone":"770000000",
-            "motDePasse":"admin123",
-            "role":"ADMIN",
-            "photo":"",
-            "statut":"ACTIF"
-        }
-    ],
-    "categories":[
-        {
-            "id":1,
-            "nom":"Salon",
-            "image":""
-        },
-        {
-            "id":2,
-            "nom":"Chambre",
-            "image":""
-        },
-        {
-            "id":3,
-            "nom":"Salle à manger",
-            "image":""
-        },
-        {
-            "id":4,
-            "nom":"Bureau",
-            "image":""
-        }
-    ],
-    "produits":[
-        {
-            "id":1,
-            "nom":"Canapé moderne",
-            "description":"...",
-            "prix":350000,
-            "stock":5,
-            "dateCreation":"2026-07-13",
-            "dateModification":"2026-07-15",
-            "images":[
-            "img1.jpg",
-            "img2.jpg"
-            ],
-            "categorieId":1,
-            "artisanId":2,
-            "statut":"VALIDE",
-            "datePublication":"2026-07-14",
-            "noteMoyenne":0,
-            "nombreAvis":0,
-            "estVisible": true
-        }
-    ],
-    "commandes":[
-        {
-            "id":1,
-            "clientId":3,
-            "dateCommande":"2026-07-14",
-            "montant":350000,
-            "adresseLivraison":"Dakar",
-            "modePaiement":"",
-            "referencePaiement":"",
-            "statut":"EN_COURS"
-        }
-    ],
-    "lignesCommande":[
-        {
-            "id":1,
-            "commandeId":1,
-            "produitId":1,
-            "quantite":2,
-            "prix":350000
-        }
-    ],
-    "livraisons":[
-        {
-            "id":1,
-            "commandeId":1,
-            "livreurId":4,
-            "dateLivraison":"2026-07-16",
-            "dateRecuperation":"2026-07-16",
-            "dateLivree":"2026-07-16",
-            "statut":"EN_COURS"
-        }
-    ],
-    "demandesSurMesure":[
-        {
-            "id":1,
-            "clientId":3,
-            "description":"Je veux une armoire 4 portes",
-            "dimensions":"3m x 2m",
-            "materiau":"Bois rouge",
-            "budget":600000,
-            "image":"armoire.jpg",
-            "dateCreation":"2026-07-16",
-            "dateCloture":"2026-07-19",
-            "statut":"EN_ATTENTE"
-        }
-    ],
-    "propositions":[
-        {
-            "id":1,
-            "demandeSurMesureId":1,
-            "artisanId":2,
-            "prix":580000,
-            "delai":"15 jours",
-            "message":"Nous pouvons réaliser ce meuble.",
-            "statut":"EN_ATTENTE"
-        }
-    ],
-    "avis":[
-        {
-            "id":1,
-            "clientId":3,
-            "ligneCommandeId":1,
-            "note":5,
-            "commentaire":"Très beau canapé.",
-            "date":"2026-07-20"
-        }
-    ],
-    "notifications":[
-        {
-            "id":1,
-            "utilisateurId":2,
-            "titre":"Nouvelle commande",
-            "message":"Vous avez reçu une nouvelle commande.",
-            "lu":false,
-            "date":"2026-07-14",
-            "type":"COMMANDE"
-        }
-    ]
+  "roles": [
+    { "id": "role-admin", "libelle": "Administrateur" },
+    { "id": "role-artisan", "libelle": "Artisan Fabricant" },
+    { "id": "role-client", "libelle": "Client Acheteur" },
+    { "id": "role-livreur", "libelle": "Livreur Logistique" }
+  ],
+  "utilisateurs": [
+    {
+      "id": "user-admin-1",
+      "nom": "Ndiaye",
+      "prenom": "Moustapha",
+      "email": "admin@kermobilier.sn",
+      "password": "admin",
+      "roleId": "role-admin"
+    },
+    {
+      "id": "user-artisan-1",
+      "nom": "Sow",
+      "prenom": "Abdoulaye",
+      "atelier": "Menuiserie Gadiaga",
+      "adresse": "Médina, Rue 22, Dakar",
+      "telephone": "771234567",
+      "email": "abdou@gmail.com",
+      "password": "password",
+      "roleId": "role-artisan",
+      "isPremium": true
+    },
+    {
+      "id": "user-artisan-2",
+      "nom": "Diop",
+      "prenom": "Ibrahima",
+      "atelier": "Atelier Diop & Frères",
+      "adresse": "Thiaroye Gare, Dakar",
+      "telephone": "761112233",
+      "email": "ibra@gmail.com",
+      "password": "password",
+      "roleId": "role-artisan",
+      "isPremium": false
+    },
+    {
+      "id": "user-client-1",
+      "nom": "Faye",
+      "prenom": "Awa",
+      "adresse": "Fann Résidence, Villa 12, Dakar",
+      "telephone": "789998877",
+      "email": "awa@gmail.com",
+      "password": "password",
+      "roleId": "role-client"
+    },
+    {
+      "id": "user-livreur-1",
+      "nom": "Ba",
+      "prenom": "Ousmane",
+      "zone": "Dakar Centre & Banlieue",
+      "telephone": "705554433",
+      "email": "ousmane@kermobilier.sn",
+      "password": "password",
+      "roleId": "role-livreur"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-1",
+      "libelle": "Salons & Canapés",
+      "image": ""
+    },
+    {
+      "id": "cat-2",
+      "libelle": "Chambres à coucher",
+      "image": ""
+    },
+    {
+      "id": "cat-3",
+      "libelle": "Tables & Salles à manger",
+      "image": ""
+    },
+    {
+      "id": "cat-4",
+      "libelle": "Cuisines Modernes",
+      "image": ""
+    }
+  ],
+  "produits": [
+    {
+      "id": "prod-1",
+      "nom": "Salon Royal en Bois de Vène",
+      "description": "Canapé 3 places + 2 fauteuils, tissu velours lavable haut de gamme.",
+      "prix": 350000,
+      "stock": 5,
+      "dateCreation": "2026-07-13",
+      "dateModification": "2026-07-15",
+      "images": "https://placehold.co",
+      "categorieId": "cat-1",
+      "artisanId": "user-artisan-1",
+      "statut": "VALIDE",
+      "datePublication": "2026-07-14",
+      "noteMoyenne": 5,
+      "nombreAvis": 1,
+      "isPremium": true
+    }
+  ],
+  "commandes": [
+    {
+      "id": "cmd-1",
+      "clientId": "user-client-1",
+      "dateCommande": "2026-07-14",
+      "montant": 350000,
+      "adresseLivraison": "Fann Résidence, Villa 12, Dakar",
+      "modePaiement": "Livraison",
+      "referencePaiement": "REF-001",
+      "statut": "EN_COURS"
+    }
+  ],
+  "lignesCommande": [
+    {
+      "id": "lcmd-1",
+      "commandeId": "cmd-1",
+      "produitId": "prod-1",
+      "quantite": 1,
+      "prix": 350000
+    }
+  ],
+  "livraisons": [
+    {
+      "id": "livr-1",
+      "commandeId": "cmd-1",
+      "livreurId": "user-livreur-1",
+      "dateLivraison": "2026-07-16",
+      "dateRecuperation": "2026-07-16",
+      "dateLivree": "2026-07-16",
+      "statut": "EN_COURS"
+    }
+  ],
+  "demandesSurMesure": [
+    {
+      "id": "sm-1",
+      "clientId": "user-client-1",
+      "description": "Je veux une armoire 4 portes",
+      "dimensions": "3m x 2m",
+      "materiau": "Bois rouge",
+      "budget": 600000,
+      "image": "armoire.jpg",
+      "dateCreation": "2026-07-16",
+      "dateCloture": "2026-07-19",
+      "statut": "EN_ATTENTE"
+    }
+  ],
+  "propositions": [
+    {
+      "id": "prop-1",
+      "demandeSurMesureId": "sm-1",
+      "artisanId": "user-artisan-1",
+      "prix": 580000,
+      "delai": "15 jours",
+      "message": "Nous pouvons réaliser ce meuble.",
+      "statut": "EN_ATTENTE"
+    }
+  ],
+  "avis": [
+    {
+      "id": "avis-1",
+      "clientId": "user-client-1",
+      "ligneCommandeId": "lcmd-1",
+      "note": 5,
+      "commentaire": "Très beau canapé.",
+      "date": "2026-07-20"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-1",
+      "utilisateurId": "user-artisan-1",
+      "titre": "Nouvelle commande",
+      "message": "Vous avez reçu une nouvelle commande.",
+      "lu": false,
+      "date": "2026-07-14",
+      "type": "COMMANDE"
+    }
+  ]
 }

@@ -1,9 +1,21 @@
 {
   "roles": [
-    { "id": "admin", "libelle": "Administrateur" },
-    { "id": "artisan", "libelle": "Artisan Fabricant" },
-    { "id": "client", "libelle": "Client Acheteur" },
-    { "id": "livreur", "libelle": "Livreur Logistique" }
+    {
+      "id": "admin",
+      "libelle": "Administrateur"
+    },
+    {
+      "id": "artisan",
+      "libelle": "Artisan Fabricant"
+    },
+    {
+      "id": "client",
+      "libelle": "Client Acheteur"
+    },
+    {
+      "id": "livreur",
+      "libelle": "Livreur Logistique"
+    }
   ],
   "utilisateurs": [
     {
@@ -12,7 +24,7 @@
       "prenom": "Moustapha",
       "email": "admin@kermobilier.sn",
       "password": "admin",
-      "roleId": "admin"
+      "role": "admin"
     },
     {
       "id": "user-artisan-1",
@@ -23,7 +35,7 @@
       "telephone": "771234567",
       "email": "abdou@gmail.com",
       "password": "password",
-      "roleId": "artisan",
+      "role": "artisan",
       "isPremium": true
     },
     {
@@ -35,7 +47,7 @@
       "telephone": "761112233",
       "email": "ibra@gmail.com",
       "password": "password",
-      "roleId": "artisan",
+      "role": "artisan",
       "isPremium": false
     },
     {
@@ -46,7 +58,7 @@
       "telephone": "789998877",
       "email": "awa@gmail.com",
       "password": "password",
-      "roleId": "client"
+      "role": "client"
     },
     {
       "id": "user-livreur-1",
@@ -56,29 +68,47 @@
       "telephone": "705554433",
       "email": "ousmane@kermobilier.sn",
       "password": "password",
-      "roleId": "livreur"
+      "role": "livreur"
+    },
+    {
+      "id": "user-client-1784631274879",
+      "nom": "Ba",
+      "prenom": "Pape",
+      "email": "bapape@gmail.com",
+      "password": "pape123",
+      "telephone": "789890082",
+      "role": "client",
+      "adresse": "Mbour",
+      "supprime": true,
+      "dateSuppression": "2026-07-21T21:18:52.206Z"
     }
   ],
   "categories": [
     {
       "id": "cat-1",
       "libelle": "Salons & Canapés",
-      "image": ""
+      "image": "https://res.cloudinary.com/dhevj2qfc/image/upload/v1784670323/ker_mobilier/kcsufgrrptnyfx0i8t5t.jpg"
     },
     {
       "id": "cat-2",
       "libelle": "Chambres à coucher",
-      "image": ""
+      "image": "https://res.cloudinary.com/dhevj2qfc/image/upload/v1784669896/twksotriyvboxwddfs99.png"
     },
     {
       "id": "cat-3",
       "libelle": "Tables & Salles à manger",
-      "image": ""
+      "image": "https://res.cloudinary.com/dhevj2qfc/image/upload/v1784669921/az7jbgipxhzwmd9mrduz.png"
     },
     {
       "id": "cat-4",
       "libelle": "Cuisines Modernes",
       "image": ""
+    },
+    {
+      "libelle": "Armoire",
+      "image": "https://res.cloudinary.com/dhevj2qfc/image/upload/v1784669832/gibbosj1mdhanmiavtdd.jpg",
+      "supprime": false,
+      "id": "bnM5wIk"
     }
   ],
   "produits": [
@@ -89,15 +119,35 @@
       "prix": 350000,
       "stock": 5,
       "dateCreation": "2026-07-13",
-      "dateModification": "2026-07-15",
-      "images": "https://placehold.co",
+      "dateModification": "2026-07-22",
+      "images": "https://res.cloudinary.com/dhevj2qfc/image/upload/v1784764030/ker_mobilier/bnblwhzxsm8n3sktnbso.png",
       "categorieId": "cat-1",
       "artisanId": "user-artisan-1",
       "statut": "VALIDE",
       "datePublication": "2026-07-14",
       "noteMoyenne": 5,
       "nombreAvis": 1,
-      "isPremium": true
+      "isPremium": true,
+      "materiau": ""
+    },
+    {
+      "nom": "Table Basse Ngor",
+      "description": "Magnifique table basse artisanale en bois de vène massif. Design moderne et épuré, idéale pour embellir votre salon.",
+      "prix": 150000,
+      "stock": 3,
+      "materiau": "Bois de Vène et Tissu Velours",
+      "categorieId": "cat-1",
+      "images": "https://res.cloudinary.com/dhevj2qfc/image/upload/v1784763976/ker_mobilier/nyjhx9vu8xfoffhu7tci.png",
+      "artisanId": "user-artisan-1",
+      "statut": "EN_ATTENTE",
+      "ajoutePar": "artisan",
+      "isPremium": true,
+      "dateCreation": "2026-07-22",
+      "datePublication": null,
+      "noteMoyenne": 0,
+      "nombreAvis": 0,
+      "supprime": false,
+      "id": "s0wJgt1"
     }
   ],
   "commandes": [
